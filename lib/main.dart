@@ -67,8 +67,8 @@ class _RandomWordsState extends State<RandomWords> {
   }
 
   void _pushSaved() {
-    Navigator.of(context)
-        .push(MaterialPageRoute<void>(builder: (BuildContext context) {
+    Navigator.push(context,
+        MaterialPageRoute<void>(builder: (BuildContext context) {
       final tiles = _saved.map((WordPair pair) {
         return ListTile(title: Text(pair.asPascalCase, style: _biggerFont));
       });
